@@ -1,0 +1,51 @@
+<mat-form-field>
+  <label for="filter">Filter by Tytle<input matInput (keyup)="applyFilter($event.target.value)" id="filter"></label>
+
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8"  matSort>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-mini-button>
+        VIEW
+      </button>
+    </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="imgLogo">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element"><img src="{{element.OrgLog}}" alt="logo"> </td>
+
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+    <td mat-cell *matCellDef="let element"> {{element.TaskTitle}}
+    <div *ngIf="element.filter" id="tip">{{element.filter}}</div>
+    </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+    <td mat-cell *matCellDef="let element"> {{element.TaskStatus}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dueDate">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Due Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.DueDate}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="submissionDate">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Submission Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.SubmittedDate}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

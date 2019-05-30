@@ -1,10 +1,19 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {AppComponent} from "./app.component";
+import {NotFoundComponent} from "./not-found.component";
+const routes: Routes = [
+  { path: '', component: AppComponent},
+  { path: 'e-Folder_Home', component: AppComponent},
+  { path: '**', component: NotFoundComponent }
+];
 
-const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations: [
+    NotFoundComponent
+  ]
 })
 export class AppRoutingModule { }

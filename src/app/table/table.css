@@ -1,0 +1,84 @@
+/* Structure */
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+th.mat-header-cell{
+  background-color: #7b7b7b;
+  color: white;
+  border-right: solid 1px white;
+  border-bottom: solid 1px #000000b0;
+  padding: 15px;
+}
+/*#mat-tab-content-0-0 > div > datatable > table > tbody > tr:nth-child(1){*/
+  /**/
+/*}*/
+tr.mat-footer-row, tr.mat-row{
+  color: #7b7b7b;
+    border: solid 2px #e5e5e5;
+}
+/*#mat-tab-content-0-0 > div > datatable > table > tbody > tr:nth-child(1) > td.mat-cell.cdk-column-action.mat-column-action.ng-star-inserted > button{}*/
+button{
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  width: 57px;
+  height: 29px;
+  font-size: 11px;
+  background-color: #979797;
+  outline: none;
+}
+button:hover{
+  filter: brightness(80%);
+}
+mat-form-field{
+  margin-bottom: 45px;
+  position: relative;
+}
+mat-form-field label {
+  position: absolute;
+  border-bottom: solid 1px #979797;
+}
+mat-form-field input {
+  color: green;
+  position: absolute;
+  top: 0px;
+  left: 80px;
+  padding-left: 15px;
+  border-bottom: solid 1px #979797;
+}
+
+.ng-star-inserted{
+  position: relative;
+}
+#tip{
+  background-color: white;
+  position: absolute;
+  top: -22px;
+  left: 52px;
+  border: solid 1px;
+  border-radius: 5px;
+  width: max-content;
+  padding: 5px 9px;
+  /*visibility: hidden;*/
+}
+#tip::before{
+  content: '';
+  position: absolute; /* Абсолютное позиционирование */
+  left: 3px; bottom: -21.5px; /* Положение треугольника */
+  border: 11px solid transparent; /* Прозрачные границы */
+  border-top: 11px solid ; /* Добавляем треугольник */
+}
+#tip::after{
+  content: '';
+  position: absolute; /* Абсолютное позиционирование */
+  left: 4px; bottom: -19px; /* Положение треугольника */
+  border: 10px solid transparent; /* Прозрачные границы */
+  border-top: 10px solid white; /* Добавляем треугольник */
+}
+.cdk-column-imgLogo.mat-column-imgLogo.ng-star-inserted > img{width: 35px;}

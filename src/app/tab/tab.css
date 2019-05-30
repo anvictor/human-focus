@@ -1,0 +1,7 @@
+.mat-tab, .mat-tab-label:hover{
+  border-bottom: solid 2px #3852b3;
+}
+
+.mat-tab-body{
+  margin-top: 50px ;
+}
